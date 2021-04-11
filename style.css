@@ -1,0 +1,11 @@
+#main-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.containers {
+  margin: 20px;
+  padding: 5px 40px 40px 40px;
+  color: red;
+  background: black;
+}
