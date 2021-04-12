@@ -17,9 +17,12 @@ $(() => {
     let userInput = $("#search").val();
 
     settings.url = "https://www.edamam.com/search?q=" + userInput;
-    // prevent from refreshing on every click //
+
+    // clears previous results upon submitting
     $("#main-container").empty();
+    // prevents from refreshing on every click //
     event.preventDefault();
+    // clears search bar after submitting
     $("form").trigger("reset");
 
     $.ajax(settings).then((data) => {
@@ -32,12 +35,20 @@ $(() => {
         // Title
         let title = $("<h3>").addClass("title").html(data.hits[i].recipe.label);
 
-        // health label button
-        let buttonHealth = $("<button>")
-          .addClass("healthBtn")
-          .text("Allergens");
+        // ingredient button
+        let buttonIngredient = $("<button>")
+          .addClass("underBtn")
+          .text("Ingredients");
 
-        // small div
+        //  heatlh button
+        let buttonHealth = $("<button>")
+          .addClass("underBtn")
+          .text("Ingredients");
+
+        // div for under buttons
+        let underDiv = $("<div>").addClass("underDiv");
+
+        // small div containing each result
         let smallDiv = $("<div>").addClass("small");
 
         // div for modal
@@ -46,22 +57,46 @@ $(() => {
         // ul for modal
         let modalUl = $("<ul>").addClass("modalUl");
 
+        // ingredient Labels li
+        let ingredientLabel = $("<li>")
+          .addClass("ingredients")
+          .html(data.hits[i].recipe.ingredientLines);
+
         // Health Labels li
         let healthLabel = $("<li>")
           .addClass("health")
-          .html(data.hits[i].recipe.healthLabels);
+          .html(data.hits[i].recipe.healthLabel);
+
+        // link for recipe
+        let url = $(`<a target="_blank" href= ${data.hits[i].recipe.url}>`)
+          .addClass("url")
+          .html("Go to recipe");
 
         // appending to the DOM
         // $("#main-container").append(mainModal);
         // mainModal.append(modalUl);
-        // modalUl.append(healthLabel);
+        // modalUl.append(ingredientLabel);
 
         $("#main-container").append(smallDiv);
         smallDiv.append(title);
         smallDiv.append(images);
-        smallDiv.append(buttonHealth);
+        underDiv.append(buttonIngredient);
+        underDiv.append(buttonHealth);
+        smallDiv.append(underDiv);
+        smallDiv.append(url);
         console.log(data.hits[i].recipe);
       }
     });
+  });
+  let nav = $(".nav").offset().top;
+
+  $(window).on("scroll", () => {
+    let scrollValue = $(window).scrollTop();
+
+    if (scrollValue > nav) {
+      $(".nav").addClass("sticky");
+    } else {
+      $(".nav").removeClass("sticky");
+    }
   });
 });

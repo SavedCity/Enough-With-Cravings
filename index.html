@@ -6,6 +6,15 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100&display=swap");
     </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Acme&family=Lexend:wght@100&family=Pacifico&family=Shadows+Into+Light&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100&family=Pacifico&family=Shadows+Into+Light&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Acme&family=Catamaran:wght@600&family=Fredoka+One&family=Lexend:wght@100&family=Pacifico&family=Shadows+Into+Light&display=swap");
+    </style>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -13,12 +22,21 @@
       crossorigin="anonymous"
     ></script>
     <script src="app.js" charset="utf-8"></script>
+    <header>
+      <div class="kitchen">
+        <h1 class="enough">Enough with the</h1>
+        <h1 class="cooking">cooking</h1>
+      </div>
+      <div class="bottom-text"><h1 class="cravings">cravings</h1></div>
+    </header>
   </head>
   <body>
-    <form>
-      <input id="search" type="text" placeholder="Cravings..." value="" />
-      <input class="go" type="submit" value="GO" />
-    </form>
+    <div class="nav">
+      <form>
+        <input id="search" type="text" placeholder=" Cravings..." value="" />
+        <input class="fa fa search" type="submit" value="GO" />
+      </form>
+    </div>
 
     <div id="main-container"></div>
   </body>
