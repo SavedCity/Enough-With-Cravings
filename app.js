@@ -13,25 +13,55 @@ $(() => {
   };
 
   //button to retrieve data //
-  $(".go").on("click", (event) => {
+  $("form").on("submit", (event) => {
     let userInput = $("#search").val();
 
     settings.url = "https://www.edamam.com/search?q=" + userInput;
     // prevent from refreshing on every click //
-    // event.preventDefault();
+    $("#main-container").empty();
+    event.preventDefault();
+    $("form").trigger("reset");
 
     $.ajax(settings).then((data) => {
       for (let i = 0; i < data.hits.length; i++) {
-        // creating a container for every result
-        let squares = $("<img>")
-          .addClass("containers")
+        // Image
+        let images = $("<img>")
+          .addClass("images")
           .attr("src", data.hits[i].recipe.image);
 
-        // appending it to the DOM
-        $("#main-container").append(squares);
-        console.log(data.hits[i].recipe.image);
+        // Title
+        let title = $("<h3>").addClass("title").html(data.hits[i].recipe.label);
+
+        // health label button
+        let buttonHealth = $("<button>")
+          .addClass("healthBtn")
+          .text("Allergens");
+
+        // small div
+        let smallDiv = $("<div>").addClass("small");
+
+        // div for modal
+        let mainModal = $("<div>").addClass("mainModal");
+
+        // ul for modal
+        let modalUl = $("<ul>").addClass("modalUl");
+
+        // Health Labels li
+        let healthLabel = $("<li>")
+          .addClass("health")
+          .html(data.hits[i].recipe.healthLabels);
+
+        // appending to the DOM
+        // $("#main-container").append(mainModal);
+        // mainModal.append(modalUl);
+        // modalUl.append(healthLabel);
+
+        $("#main-container").append(smallDiv);
+        smallDiv.append(title);
+        smallDiv.append(images);
+        smallDiv.append(buttonHealth);
+        console.log(data.hits[i].recipe);
       }
-      console.log(data);
     });
   });
 });

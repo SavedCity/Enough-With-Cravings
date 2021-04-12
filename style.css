@@ -1,11 +1,58 @@
+body {
+  background: #fb9;
+}
+
+#search {
+  width: 20%;
+  height: 40px;
+  font-size: 40px;
+  border-radius: 10px;
+}
+
+.go {
+  width: 5%;
+  height: 40px;
+  border-radius: 10%;
+}
+
 #main-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.containers {
-  margin: 20px;
-  padding: 5px 40px 40px 40px;
-  color: red;
-  background: black;
+.images {
+  width: 60%;
+  border: 4px solid #1113;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  font-family: lexend;
+  width: 50%;
+  margin: 5px;
+}
+
+.small {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  margin-bottom: 90px;
+}
+
+.health {
+  list-style-type: none;
+}
+.mainModal {
+  width: 30%;
+}
+.healthBtn {
+  background: #fff5;
+  border: none;
+  height: 36px;
+  width: 90px;
+  margin-top: 5px;
 }
