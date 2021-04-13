@@ -1,10 +1,16 @@
 body {
-  background: #fb9;
+  background: #0607;
 }
 header {
-  border: 5px solid #1113;
-  background: #bbb;
-  margin-bottom: 50px;
+  border: 3px solid #111;
+  background: #9999;
+  margin-bottom: 20px;
+  background-image: url(https://thumbs.dreamstime.com/b/asian-food-background-various-ingredients-rustic-stone-top-view-vietnam-thai-cuisine-148762904.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: saturation;
+}
+.pic {
 }
 .kitchen {
   display: flex;
@@ -54,29 +60,32 @@ header {
   font-size: 30px;
   /* margin-bottom: 120px; */
   /* margin-right: 0; */
-  /* border-radius: 50px; */
+  border-radius: 50px;
   border: none;
   outline: inherit;
   caret-color: white;
-  background: #3335;
+  background: #333;
+  color: white;
 }
 
 input[type="submit"] {
   text-align: center;
   font-size: 25px;
-  /* height: 11.5%; */
-  /* width: 7%; */
-  /* border-radius: 50px; */
-  border: 3px solid #0009;
+  height: 59px;
+  width: 59px;
+  border-radius: 50%;
+  border: 1px solid #0009;
   background: white;
-  /* position: absolute; */
-  /* margin-left: 42.5%; */
+  position: absolute;
+  margin-left: 40.8%;
   outline: none;
   font-family: catamaran;
+  margin-top: 1px;
 }
 input[type="submit"]:hover {
-  background: #fff9;
+  background: #ddd;
   cursor: pointer;
+  font-size: 28px;
 }
 form {
   display: flex;
@@ -90,28 +99,31 @@ form {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: #bbb;
-  height: 120px;
+  background: #0602;
+  border: 3px solid #0006;
+  height: 100px;
 }
 #main-container {
-  margin-top: 170px;
+  /* margin-top: 10%; */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  position: ;
 }
 .images {
   width: 60%;
-  box-shadow: 0px 0px 9px #1117;
+  box-shadow: 0px 0px 8px #1119;
 }
 .images:hover {
 }
 .title {
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
   font-family: lexend;
   width: 60%;
   margin-bottom: 14px;
+  font-weight: 400;
 }
 
 .small {
@@ -150,7 +162,7 @@ form {
   /* margin: 10px; */
 }
 .underBtn:hover {
-  background: #f587;
+  background: #dd58;
 }
 .url {
   text-decoration: none;
@@ -160,7 +172,7 @@ form {
   text-align: center;
   margin-top: 8px;
   color: white;
-  background: #3334;
+  background: #3338;
   font-family: catamaran;
 }
 .url:hover {
@@ -172,7 +184,27 @@ form {
 .sticky {
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(125, 204, 125);
 }
-h5 {
-  font-size: 30px;
+
+.navPlaceholder {
+  height: 100px;
+}
+.right-text {
+  text-align: center;
+  font-family: bangers;
+  font-size: 35px;
+  margin-left: 55px;
+  color: rgb(196, 193, 100);
+  text-shadow: 0 0 6px black;
+}
+.left-text {
+  text-align: center;
+  font-family: bangers;
+  font-size: 40px;
+  margin-right: 55px;
+  color: rgb(232, 149, 90);
+  text-shadow: 0 0 6px black;
 }

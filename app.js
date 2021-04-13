@@ -41,9 +41,7 @@ $(() => {
           .text("Ingredients");
 
         //  heatlh button
-        let buttonHealth = $("<button>")
-          .addClass("underBtn")
-          .text("Ingredients");
+        let buttonHealth = $("<button>").addClass("underBtn").text("Allergens");
 
         // div for under buttons
         let underDiv = $("<div>").addClass("underDiv");
@@ -85,10 +83,23 @@ $(() => {
         smallDiv.append(underDiv);
         smallDiv.append(url);
         console.log(data.hits[i].recipe);
+
+        // in case image is not availble
+        $("img").on("error", function () {
+          $(this).attr(
+            "src",
+            "https://faculty.eng.ufl.edu/dobson-lab/wp-content/uploads/sites/88/2015/11/img-placeholder.png"
+          );
+        });
       }
     });
   });
+
+  // STICKY NAV //
   let nav = $(".nav").offset().top;
+
+  // The body would jump upwards so had to fix that
+  $(".nav").wrap(".navPlaceholder");
 
   $(window).on("scroll", () => {
     let scrollValue = $(window).scrollTop();
