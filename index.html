@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Find your recipe</title>
+    <title>Enough with the cravings</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Acme&family=Bangers&family=Catamaran:wght@600&family=Fredoka+One&family=Lexend:wght@100;300;400;500&family=Pacifico&family=Shadows+Into+Light&display=swap");
     </style>
@@ -26,6 +26,11 @@
     ></script>
     <script src="app.js" charset="utf-8"></script>
     <header>
+      <img
+        class="utensils-top"
+        src="https://www.pinclipart.com/picdir/big/86-862588_mobi-food-logo-gif-clipart.png"
+        alt="utensils logo"
+      />
       <div class="kitchen">
         <h1 class="enough">Enough with the</h1>
         <h1 class="cooking">cooking</h1>
@@ -44,12 +49,40 @@
     </div>
     <div class="navPlaceholder"></div>
     <div class="searchText"></div>
+    <div class="modal-container" id="modal_container">
+      <div class="modal">
+        <h1></h1>
+      </div>
+      <button id="close" type="button">CLOSE</button>
+    </div>
     <div id="main-container"></div>
-    <img
-      id="frustrated"
-      src="https://cdn10.bostonmagazine.com/wp-content/uploads/sites/2/2020/11/Sad-cook-social.jpg"
-      alt="frustrated person in the kitchen"
-    />
+
+    <div class="intro-image">
+      <!-- <img
+        id="frustrated"
+        src="https://cdn10.bostonmagazine.com/wp-content/uploads/sites/2/2020/11/Sad-cook-social.jpg"
+        alt="frustrated person in the kitchen"
+      /> -->
+    </div>
   </body>
-  <footer></footer>
+  <footer>
+    <hr />
+
+    <div class="foot-container">
+      <img
+        class="utensils"
+        src="https://www.pinclipart.com/picdir/big/86-862588_mobi-food-logo-gif-clipart.png"
+        alt="utensils logo"
+      />
+      <div class="footer">
+        <div class="kitchen">
+          <h1 class="enough-foot">Enough with the</h1>
+          <h1 class="cooking-foot">cooking</h1>
+        </div>
+        <div class="bottom-text-foot">
+          <h1 class="cravings-foot">cravings</h1>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>
