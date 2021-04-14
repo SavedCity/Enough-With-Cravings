@@ -16,10 +16,14 @@ $(() => {
   $("form").on("submit", (event) => {
     let userInput = $("#search").val();
 
-    settings.url = "https://www.edamam.com/search?q=" + userInput;
+    settings.url =
+      "https://www.edamam.com/search?q=" + userInput + "&from=0&to=39";
 
     // clears previous results upon submitting
     $("#main-container").empty();
+    $(".left-text").empty();
+    $(".right-text").empty();
+
     // prevents from refreshing on every click //
     event.preventDefault();
     // clears search bar after submitting
@@ -60,29 +64,22 @@ $(() => {
           .addClass("ingredients")
           .html(data.hits[i].recipe.ingredientLines);
 
-        // Health Labels li
-        let healthLabel = $("<li>")
-          .addClass("health")
-          .html(data.hits[i].recipe.healthLabel);
-
         // link for recipe
         let url = $(`<a target="_blank" href= ${data.hits[i].recipe.url}>`)
           .addClass("url")
           .html("Go to recipe");
 
         // appending to the DOM
-        // $("#main-container").append(mainModal);
-        // mainModal.append(modalUl);
-        // modalUl.append(ingredientLabel);
 
         $("#main-container").append(smallDiv);
+
         smallDiv.append(title);
         smallDiv.append(images);
         underDiv.append(buttonIngredient);
         underDiv.append(buttonHealth);
         smallDiv.append(underDiv);
         smallDiv.append(url);
-        console.log(data.hits[i].recipe);
+        console.log(data.hits[i].recipe.healthLabels);
 
         // in case image is not availble
         $("img").on("error", function () {
@@ -91,7 +88,25 @@ $(() => {
             "https://faculty.eng.ufl.edu/dobson-lab/wp-content/uploads/sites/88/2015/11/img-placeholder.png"
           );
         });
+        // for (let x = 0; x < data.hits[i].recipe.healthLabels.length; i++) {
+        //   // Health Labels li
+        //   let healthLabel = $("<li>")
+        //     .addClass("health")
+        //     .html(data.hits[i].recipe.healthLabels[x]);
+        //   $(".small").append(".mainModal");
+        //   $(".mainModal").append(".modalUl");
+        //   $(".modalUl").append(healthLabel);
+        //   console.log(data.hits[i].recipe.healthLabels[x]);
+        // }
       }
+      const searchTextLeft = $("<h3>")
+        .addClass("left-text")
+        .text(`Craving some ${userInput} recipes?`);
+      $(".nav").prepend(searchTextLeft);
+      const searchTextRight = $("<h3>")
+        .addClass("right-text")
+        .text(`Great ${userInput} recipes here!`);
+      $(".nav").prepend(searchTextRight);
     });
   });
 
