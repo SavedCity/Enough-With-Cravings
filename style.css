@@ -216,7 +216,7 @@ form {
 .have-it {
   font-size: 25px;
   text-align: center;
-  background: #2222;
+  background: #1118;
   font-weight: 100;
   font-family: acme;
   width: 42%;
@@ -297,7 +297,7 @@ form {
   pointer-events: auto;
 }
 .modal1 {
-  background-color: #fff;
+  background-color: rgba(215, 215, 215, 0.9);
   width: 600px;
   max-width: 100%;
   padding: 30px 50px;
@@ -310,8 +310,8 @@ form {
   align-items: center;
 }
 .modal2 {
-  background-color: #fff;
-  width: 600px;
+  background-color: rgba(215, 215, 215, 0.9);
+  width: 400px;
   max-width: 100%;
   padding: 30px 50px;
   text-align: center;
@@ -461,7 +461,8 @@ form {
 
 @media (max-width: 700px) {
   .food-text {
-    font-size: 30px;
+    font-size: 20px;
+    margin-left: 20px;
   }
 
   .vegan,
@@ -533,6 +534,9 @@ form {
     width: 60%;
     height: 500px;
   }
+  .modal2 {
+    width: 300px;
+  }
   .ingredients {
     font-size: 12px;
   }
@@ -547,6 +551,9 @@ form {
 /* larger mobile screens  */
 
 @media (min-width: 701px) and (max-width: 1000px) {
+  .food-text {
+    font-size: 35px;
+  }
   .small {
     width: 40%;
     margin: 19px;
