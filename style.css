@@ -9,15 +9,16 @@ header {
   justify-content: center;
   align-items: center; */
 }
+
 .utensils-top {
   width: 160px;
   border-radius: 50%;
   box-shadow: 0 0 10px white;
-  background: green;
+  background: #9b1;
   cursor: pointer;
   position: absolute;
   margin-left: 17%;
-  margin-top: 40px;
+  margin-top: 39px;
 }
 .kitchen {
   display: flex;
@@ -57,7 +58,7 @@ header {
   font-family: acme;
   text-shadow: 2px 2px 15px black;
   margin-top: 0;
-  margin-left: 28%;
+  margin-left: 9%;
   padding-top: 0px;
   color: rgb(46, 187, 95);
 }
@@ -109,21 +110,73 @@ form {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: #8c89;
+  background: #bd89;
   border: 3px solid #0006;
   height: 100px;
 }
-/* .searchText {
-  color: white;
-  font-size: 25px;
-  font-family: lexend;
+.recommendations {
   display: flex;
   justify-content: center;
-  border: 2px solid black;
-  width: 50%;
-  height: 70px;
+}
+.intro-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: bebas neue;
+  margin-bottom: 90px;
+  color: #ffb;
+  text-shadow: 0px 0px 20px black;
+  border: 1px solid;
+  width: 700px;
+  /* margin-left: 32%; */
+  background: #ffb9;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* //////////// intro pictures ////////// */
+.food-text {
+  font-size: 50px;
+  margin-left: 60px;
+  color: white;
+  font-family: dela gothic one;
+  text-shadow: 5px 2px 10px black;
+}
+.vegan {
+  margin-left: 25%;
+  width: 170px;
+  border-radius: 50%;
+}
+.sushi {
+  margin-left: 25%;
+  width: 170px;
+  border-radius: 50%;
+}
+.soups {
+  margin-left: 25%;
+  width: 170px;
+  border-radius: 50%;
+}
+.pasta {
+  margin-left: 25%;
+  width: 170px;
+  border-radius: 50%;
+}
+.mediterranean {
+  margin-left: 25%;
+  width: 170px;
+  border-radius: 50%;
+}
+.desserts {
+  margin-left: 25%;
+  width: 170px;
+  border-radius: 50%;
+}
+.recom-div {
+  /* border: 2px solid; */
+  margin-bottom: 40px;
+  display: flex;
   align-items: center;
-} */
+}
 
 #main-container {
   /* margin-top: 10%; */
@@ -133,16 +186,17 @@ form {
   justify-content: center;
 }
 .images {
-  width: 60%;
+  border-radius: 8px;
+  width: 70%;
   box-shadow: 0px 0px 30px #000;
 }
 .images:hover {
 }
 .title {
-  font-size: 28px;
+  font-size: 35px;
   text-align: center;
   font-family: lexend;
-  width: 60%;
+  width: 80%;
   margin-bottom: 14px;
   font-weight: 400;
   color: white;
@@ -154,15 +208,59 @@ form {
   align-items: center;
   flex-direction: column;
   width: 25%;
-  margin-bottom: 90px;
+  margin: 0px 0px 90px 0px;
+  /* border: 2px solid; */
+  /* background: #b949; */
+}
+
+.have-it {
+  font-size: 25px;
+  text-align: center;
+  background: #2222;
+  font-weight: 100;
+  font-family: acme;
+  width: 42%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f479;
+  border-radius: 4px;
+}
+
+.ingredients:hover {
+  color: #0007;
 }
 
 .ingredients {
-  font-size: 30px;
+  font-size: 20px;
   color: #0009;
+  list-style-type: none;
+  font-family: Libre Franklin;
+  cursor: default;
+}
+.health {
+  font-size: 27px;
+  color: #0009;
+  list-style-type: none;
+  font-family: Libre Franklin;
 }
 
-.modal-container {
+.fas {
+  font-size: 35px;
+  color: #2229;
+  top: 10px;
+  position: absolute;
+  right: 17px;
+  cursor: pointer;
+}
+.fas:hover {
+  font-size: 40px;
+  top: 9px;
+  right: 16px;
+  color: #0009;
+}
+.modal-container1 {
   /* display: none; */
   position: fixed;
   top: 0;
@@ -176,22 +274,52 @@ form {
   pointer-events: none;
   opacity: 0;
 }
-
-.modal-container.show {
+.modal-container2 {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+}
+.modal-container1.show {
   opacity: 1;
   pointer-events: auto;
 }
-
-.modal {
+.modal-container2.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal1 {
   background-color: #fff;
   width: 600px;
   max-width: 100%;
   padding: 30px 50px;
   text-align: center;
   border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.modal2 {
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
 }
 .underDiv {
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-content: space-between;
@@ -204,7 +332,7 @@ form {
   width: 100%;
   margin-top: 8px;
   outline: none;
-  font-size: 15px;
+  font-size: 19px;
   font-family: catamaran;
   color: #ddd;
   text-align: center;
@@ -219,16 +347,18 @@ form {
   text-decoration: none;
   font-size: 25px;
   border: 2px solid #fff9;
-  width: 59%;
+  width: 69%;
   text-align: center;
   margin-top: 8px;
+  margin-bottom: 20px;
   color: white;
   background: #3338;
   font-family: catamaran;
 }
 .url:hover {
-  background: #3336;
+  background: #bb79;
   font-size: 26px;
+  color: #ddd;
 }
 
 .sticky {
@@ -262,11 +392,6 @@ form {
   text-shadow: 0 0 6px black;
 }
 
-#frustrated {
-  width: 40%;
-  box-shadow: 0 0 22px #777;
-}
-
 .intro-image {
   display: flex;
   width: 100%;
@@ -283,6 +408,13 @@ form {
   margin-bottom: 50px;
 }
 
+.kitchen-bottom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin: 0 auto;
+}
 .enough-foot {
   text-align: center;
   font-size: 30px;
@@ -314,24 +446,231 @@ form {
   padding-top: 0px;
   color: rgb(46, 187, 95);
 }
-.utensils {
+.utensils-bottom {
   width: 70px;
   border-radius: 50%;
   box-shadow: 0 0 10px white;
-  background: green;
+  background: #9b1;
   margin-right: 30px;
   cursor: pointer;
 }
 
+/* ////////////////////////////// MOBILE FRIENDLY /////////////////////// */
+
 /* FOR MOBILE DEVICES */
 
-@media screen and (max-width: 500px) {
+@media (max-width: 700px) {
+  .food-text {
+    font-size: 30px;
+  }
+
+  .vegan,
+  .soups,
+  .sushi,
+  .pasta,
+  .desserts,
+  .mediterranean {
+    width: 120px;
+  }
   .small {
-    width: 50%;
+    width: 40%;
+    margin: 19px;
+  }
+  .images {
+    width: 100%;
   }
   .utensils-top {
-    margin-left: 6%;
-    margin-top: 7%;
-    width: 11%;
+    margin-left: 4%;
+    margin-top: 4%;
+    width: 15%;
+  }
+  .utensils-bottom {
+    /* width: 50px; */
+    /* margin-left: 90px; */
+    /* position: absolute; */
+  }
+  .enough,
+  .cooking,
+  .cravings {
+    font-size: 40px;
+  }
+  .bottom-text,
+  .kitchen {
+    margin-left: 90px;
+  }
+
+  .cravings {
+    margin-right: 70px;
+  }
+  .left-text,
+  .right-text {
+    font-size: 14px;
+  }
+  form {
+    width: 100%;
+  }
+  input[type="submit"] {
+    margin-right: 0px;
+    height: 62px;
+  }
+  #search {
+    margin: 0;
+  }
+  .title {
+    font-size: 25px;
+    width: 100%;
+  }
+  .url {
+    width: 100%;
+  }
+  .underDiv {
+    width: 100%;
+  }
+  .nav {
+    height: 70px;
+  }
+  .modal1 {
+    width: 60%;
+    height: 500px;
+  }
+  .ingredients {
+    font-size: 12px;
+  }
+  .have-it {
+    font-size: 15px;
+  }
+  .health {
+    font-size: 20px;
+  }
+}
+
+/* larger mobile screens  */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .small {
+    width: 40%;
+    margin: 19px;
+  }
+  .images {
+    width: 90%;
+  }
+  .utensils-top {
+    margin-left: 12%;
+    margin-top: 2%;
+    width: 12%;
+  }
+  .utensils-bottom {
+    /* width: 50px; */
+    /* margin-left: 90px; */
+    /* position: absolute; */
+  }
+  .enough,
+  .cooking,
+  .cravings {
+    font-size: 40px;
+  }
+  .bottom-text,
+  .kitchen {
+    margin-left: 90px;
+  }
+
+  .cravings {
+    margin-right: 70px;
+  }
+  .left-text,
+  .right-text {
+    font-size: 19px;
+  }
+  form {
+    width: 60%;
+  }
+  input[type="submit"] {
+    margin-right: 10px;
+    height: 62px;
+  }
+  #search {
+    margin-left: 10px;
+  }
+  .title {
+    font-size: 28px;
+    width: 100%;
+  }
+  .url {
+    width: 87%;
+  }
+  .underDiv {
+    width: 90%;
+  }
+  .nav {
+    height: 80px;
+  }
+  .modal1 {
+    width: 60%;
+    height: 500px;
+  }
+  .ingredients {
+    font-size: 17px;
+  }
+  .have-it {
+    font-size: 15px;
+  }
+}
+
+/* smaller laptops and monitors  */
+
+@media (min-width: 1001px) and (max-width: 1400px) {
+  .small {
+    width: 28%;
+    margin: 19px;
+  }
+  .images {
+    width: 90%;
+  }
+  .utensils-top {
+    margin-left: 23%;
+    margin-top: 1%;
+    width: 9%;
+  }
+  .utensils-bottom {
+    /* width: 50px; */
+    /* margin-left: 90px; */
+    /* position: absolute; */
+  }
+  .enough,
+  .cooking,
+  .cravings {
+    font-size: 40px;
+  }
+  .bottom-text,
+  .kitchen {
+    margin-left: 90px;
+  }
+
+  .cravings {
+    margin-right: 70px;
+  }
+  .left-text,
+  .right-text {
+    font-size: 19px;
+  }
+  form {
+    width: 60%;
+  }
+  input[type="submit"] {
+    margin-right: 15px;
+    height: 62px;
+  }
+  #search {
+    margin-left: 15px;
+  }
+  .title {
+    font-size: 28px;
+    width: 100%;
+  }
+  .url {
+    width: 87%;
+  }
+  .underDiv {
+    width: 90%;
   }
 }

@@ -57,19 +57,6 @@ $(() => {
         // div for modal
         let mainModal = $("<div>").addClass("mainModal");
 
-        // ul for modal
-        let modalUl = $("<ul>").addClass("modalUl");
-
-        // ingredient Labels li
-        let ingredientLabel = $("<li>")
-          .addClass("ingredients")
-          .html(data.hits[i].recipe.ingredientLines);
-
-        // Health Labels li
-        let healthLabel = $("<li>")
-          .addClass("health")
-          .html(data.hits[i].recipe.healthLabels);
-
         // link for recipe
         let url = $(`<a target="_blank" href= ${data.hits[i].recipe.url}>`)
           .addClass("url")
@@ -88,43 +75,58 @@ $(() => {
         // console.log(data.hits[i].recipe.healthLabels);
 
         //modal
-        const modal_container = $("#modal_container");
-        const close = $("#close");
+        const modal_container1 = $("#modal_container1");
+        const close1 = $("#close1");
 
         // ingredients modal button
         buttonIngredient.on("click", () => {
-          $(".modal").empty();
+          $(".modal-content1").empty();
           for (let x = 0; x < data.hits[i].recipe.ingredientLines.length; x++) {
             let ingredientLabel = $("<li>")
               .addClass("ingredients")
               .html(data.hits[i].recipe.ingredientLines[x]);
             // ul for modal
-            let modalUl = $("<ul>").addClass("modalUl");
-            console.log(data.hits[i].recipe.ingredientLines[x]);
+            let modalUl1 = $("<ul>").addClass("modalUl1");
+            // console.log(data.hits[i].recipe.ingredientLines[x]);
+            modalUl1.append(ingredientLabel);
+            $(".modal-content1").append(modalUl1);
+
+            // strike through for ingredient list
+            $(".ingredients").on("click", (event) => {
+              $(event.target).css("text-decoration", "line-through");
+            });
           }
-          modalUl.append(ingredientLabel);
-          $(".modal").append(modalUl);
-          modal_container.addClass("show");
+          modal_container1.addClass("show");
         });
+
+        const modal_container2 = $("#modal_container2");
+        const close2 = $("#close2");
 
         // allergens modal button
         buttonHealth.on("click", () => {
-          $(".modal").empty();
+          $(".modal-content2").empty();
           for (let x = 0; x < data.hits[i].recipe.healthLabels.length; x++) {
             let healthLabel = $("<li>")
               .addClass("health")
-              .html(data.hits[i].recipe.healthLabels);
+              .html(data.hits[i].recipe.healthLabels[x]);
             // ul for modal
-            let modalUl = $("<ul>").addClass("modalUl");
-            console.log(data.hits[i].recipe.healthLabels[x]);
+            let modalUl2 = $("<ul>").addClass("modalUl2");
+            // console.log(data.hits[i].recipe.healthLabels[x]);
+            modalUl2.append(healthLabel);
+            $(".modal-content2").append(modalUl2);
           }
-          modalUl.append(healthLabel);
-          $(".modal").append(modalUl);
-          modal_container.addClass("show");
+
+          modal_container2.addClass("show");
         });
 
-        close.on("click", () => {
-          modal_container.removeClass("show");
+        // close modal button1
+        close1.on("click", () => {
+          modal_container1.removeClass("show");
+        });
+
+        // close modal button2
+        close2.on("click", () => {
+          modal_container2.removeClass("show");
         });
 
         // in case image is not availble
@@ -134,21 +136,6 @@ $(() => {
             "https://faculty.eng.ufl.edu/dobson-lab/wp-content/uploads/sites/88/2015/11/img-placeholder.png"
           );
         });
-        // for (let x = 0; x < data.hits[i].recipe.ingredientLines.length; x++) {
-        //   // div for modal
-        //   let mainModal = $("<div>").addClass("mainModal");
-        //   // ingredient Labels li
-        //   let ingredientLabel = $("<li>")
-        //     .addClass("ingredients")
-        //     .html(data.hits[i].recipe.ingredientLines[x]);
-        //   // ul for modal
-        //   let modalUl = $("<ul>").addClass("modalUl");
-        //
-        //   $(".modal-show").append(mainModal);
-        //   $(mainModal).append(modalUl);
-        //   $(modalUl).append(ingredientLabel);
-        //   console.log(data.hits[i].recipe.ingredientLines[x]);
-        // }
       }
       const searchTextLeft = $("<h3>")
         .addClass("left-text")
@@ -159,20 +146,6 @@ $(() => {
         .text(`Great ${userInput} recipes here!`);
       $(".nav").prepend(searchTextRight);
     });
-  });
-
-  //modal
-
-  const open = $("#open");
-  const modal_container = $("#modal_container");
-  const close = $("#close");
-
-  open.on("click", () => {
-    modal_container.addClass("show");
-  });
-
-  close.on("click", () => {
-    modal_container.removeClass("show");
   });
 
   // reload the page on logo click for both header and footer

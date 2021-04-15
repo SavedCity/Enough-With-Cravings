@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <title>Enough with cravings</title>
+
+    <!-- links for fonts -->
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Acme&family=Bangers&family=Catamaran:wght@600&family=Fredoka+One&family=Lexend:wght@100;300;400;500&family=Pacifico&family=Shadows+Into+Light&display=swap");
     </style>
@@ -18,27 +21,47 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Acme&family=Bangers&family=Catamaran:wght@600&family=Fredoka+One&family=Lexend:wght@100&family=Pacifico&family=Shadows+Into+Light&display=swap");
     </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&display=swap");
+    </style>
+
+    <!-- links for javascript, css, jquery, and font awesome -->
+
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+
+    <script
+      src="https://kit.fontawesome.com/6008727537.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js" charset="utf-8"></script>
     <header>
+      <!-- utensil image -->
       <img
         class="utensils-top"
         src="https://www.pinclipart.com/picdir/big/86-862588_mobi-food-logo-gif-clipart.png"
         alt="utensils logo"
       />
+      <!-- website title -->
       <div class="kitchen">
-        <h1 class="enough">Enough with the</h1>
+        <h1 class="enough">Enough with</h1>
         <h1 class="cooking">cooking</h1>
       </div>
       <div class="bottom-text"><h1 class="cravings">cravings</h1></div>
     </header>
   </head>
   <body>
+    <!-- nav bar -->
     <div class="nav">
       <h4 class="left-text"></h4>
       <form>
@@ -49,34 +72,101 @@
     </div>
     <div class="navPlaceholder"></div>
     <div class="searchText"></div>
-    <div class="modal-container" id="modal_container">
-      <div class="modal">
-        <h1></h1>
+
+    <!-- MODAL FOR INGREDIENTS -->
+    <div class="modal-container1" id="modal_container1">
+      <div class="modal1">
+        <h1 class="have-it">Have it? Check it off</h1>
+        <div id="close1" type="button">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-content1"></div>
       </div>
-      <button id="close" type="button">CLOSE</button>
+    </div>
+    <!-- MODAL FOR ALLERGENS -->
+    <div class="modal-container2" id="modal_container2">
+      <div class="modal2">
+        <div id="close2" type="button">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-content2"></div>
+      </div>
     </div>
     <div id="main-container"></div>
 
-    <div class="intro-image">
-      <!-- <img
-        id="frustrated"
-        src="https://cdn10.bostonmagazine.com/wp-content/uploads/sites/2/2020/11/Sad-cook-social.jpg"
-        alt="frustrated person in the kitchen"
-      /> -->
+    <!-- recommendations for food -->
+    <div class="recom-container">
+      <div class="recommendations">
+        <h1 class="intro-title">
+          Too hungry to think? <br />
+          Select from these options!
+        </h1>
+      </div>
+      <div class="recom-div">
+        <img
+          class="vegan"
+          src="https://simplyceecee.co/wp-content/uploads/2018/07/veganbuddhabowl-2-500x500.jpg"
+          alt="vegan"
+        />
+        <h1 class="food-text">VEGAN</h1>
+      </div>
+      <div class="recom-div">
+        <img
+          class="sushi"
+          src="https://www.blondelish.com/wp-content/uploads/2020/11/California-Rolls-Recipe-Sushi-Rice-Recipe-10.jpg"
+          alt="sushi"
+        />
+        <h1 class="food-text">SUSHI</h1>
+      </div>
+
+      <div class="recom-div">
+        <img
+          class="soups"
+          src="https://assets.bonappetit.com/photos/5c1a6e3d545f2f2dd6233528/1:1/w_2560%2Cc_limit/FGFP-Sweet-Potato-Rice-Soup-Horizontal.jpg"
+          alt="soups"
+        />
+        <h1 class="food-text">SOUPS</h1>
+      </div>
+      <div class="recom-div">
+        <img
+          class="pasta"
+          src="https://cdn77-s3.lazycatkitchen.com/wp-content/uploads/2019/03/vegan-mushroom-pasta-314x314.jpg"
+          alt="pasta"
+        />
+        <h1 class="food-text">PASTA</h1>
+      </div>
+      <div class="recom-div">
+        <img
+          class="mediterranean"
+          src="https://m.albertleatribune.com/wp-content/uploads/sites/14/2020/08/N2003P66007H.jpg"
+          alt="mediterranean"
+        />
+        <h1 class="food-text">MEDITERRANEAN</h1>
+      </div>
+      <div class="recom-div">
+        <img
+          class="desserts"
+          src="http://cdn.shopify.com/s/files/1/0935/8880/files/DmXy0jIMT5gEQmP5aoGw_sticky_toffee_pudding-14_large.jpg?v=1516814877"
+          alt="desserts"
+        />
+        <h1 class="food-text">DESSERTS</h1>
+      </div>
     </div>
   </body>
   <footer>
+    <!-- footer line division -->
     <hr />
 
+    <!-- footer logo and title -->
     <div class="foot-container">
       <img
-        class="utensils"
+        class="utensils-bottom"
         src="https://www.pinclipart.com/picdir/big/86-862588_mobi-food-logo-gif-clipart.png"
         alt="utensils logo"
       />
       <div class="footer">
-        <div class="kitchen">
-          <h1 class="enough-foot">Enough with the</h1>
+        <div class="kitchen-bottom">
+          <h1 class="enough-foot">Enough with</h1>
           <h1 class="cooking-foot">cooking</h1>
         </div>
         <div class="bottom-text-foot">
