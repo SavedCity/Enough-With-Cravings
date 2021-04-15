@@ -193,7 +193,7 @@ form {
 .images:hover {
 }
 .title {
-  font-size: 35px;
+  font-size: 25px;
   text-align: center;
   font-family: lexend;
   width: 80%;
@@ -518,7 +518,7 @@ form {
     margin: 0;
   }
   .title {
-    font-size: 25px;
+    font-size: 18px;
     width: 100%;
   }
   .url {
@@ -599,7 +599,7 @@ form {
     margin-left: 10px;
   }
   .title {
-    font-size: 28px;
+    font-size: 22px;
     width: 100%;
   }
   .url {
@@ -671,7 +671,7 @@ form {
     margin-left: 15px;
   }
   .title {
-    font-size: 28px;
+    font-size: 26px;
     width: 100%;
   }
   .url {
