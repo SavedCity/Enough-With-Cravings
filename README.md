@@ -1,6 +1,6 @@
 # Recipe-website
 
-Website name: Enough with the hunger
+Website name: Enough with hunger
 
 Technologies I used: HTML, CSS, jQuery, API
 UI modules: Sticky nav and modal
