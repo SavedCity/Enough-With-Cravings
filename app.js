@@ -20,6 +20,7 @@ $(() => {
       "https://www.edamam.com/search?q=" + userInput + "&from=0&to=24";
 
     // clears previous results upon submitting
+    $(".recom-container").empty();
     $(".intro-image").empty();
     $("#main-container").empty();
     $(".left-text").empty();
